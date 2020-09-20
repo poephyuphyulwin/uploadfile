@@ -361,7 +361,7 @@ ul#media-list {
 				  <div class="wrap-upload-buttons">
                 <div class="container">
                     <ul class="btn-nav">
-                        <li><b>အဆောင်ဓာတ်ပုံထည့်ရန်</b>&nbsp; &nbsp;<span><img src="~/images/cam_ico.png" /><input type="file" name="file" click-type="type1" class="picupload" required="" multiple accept="image/*" /></span></li>
+                        <li><b>အဆောင်ဓာတ်ပုံထည့်ရန်</b>&nbsp; &nbsp;<span><img src="~/images/cam_ico.png" /><input type="file" name="file" click-type="type1" class="picupload" required="" multiple accept="image/*" id="myinput" /></span></li>
                     </ul>
                 </div>
             </div>
@@ -408,6 +408,14 @@ ul#media-list {
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
+	let isFacebookApp = function () {
+    let ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+};
+
+if (isFacebookApp) {
+   $('#myinput').removeAttr('accept');
+}
 	$(function() {
     var names = [];
     $('body').on('change', '.picupload', function(event) {
