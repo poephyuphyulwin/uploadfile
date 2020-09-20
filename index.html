@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login form</title>
+	<link rel="stylesheet" type="text/css" href="post1.css">
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=zawgyi' />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <meta name="name" content="Register Form">
+    <meta name="robots" content="noindex, nofollow">
+	<style type="text/css">
+		*{
+			 font-family: Pyidaungsu, Myanmar3,Yunghkio,'Masterpiece Uni Sans';
+        
+        font-color: #000000;
+			box-sizing: border-box;
+		}
+		body
+		{
+			background-color: white;
+			
+		}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color:#c25e00;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+ #map {
+        height: 550px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+		
+
+		.FormLayout
+		{
+			width: 350px;
+			border:1px solid #c25e00;
+			padding: 30px 20px;
+			border-radius: 10px;
+			margin:0 auto;
+			height: 70%;
+
+		}
+		.FormLyaout legend
+		{
+			font-size: 20em;
+			text-align: center;
+		}
+		.Form-input
+		{
+			margin-bottom: 20px;
+
+		}
+		.SelectLayout
+		{
+			display: block;
+			width: 100%;
+			border-radius: 10px;
+			padding: 10px 15px;
+			border:1px solid #c25e00;
+			background-color: white;
+		}
+		.Form-input label
+		{
+			display: block;
+			margin-bottom: 10px;
+		}
+		.Form-input input
+		{
+			display: block;
+			width: 100%;
+			border-radius: 10px;
+			padding: 10px 15px;
+			border:1px solid #c25e00;
+			background-color: white;
+		}
+		.Btn
+		{
+			border-radius: 8px;
+			display: inline-block;
+			font-size: 14px;
+			padding: 10px 15px;
+			border:2px solid #c25e00;
+			background-color: #ffffff;
+			margin-top: 15px;
+			cursor: pointer;
+			width: 45%;
+			margin-left: 10px;
+			
+		}
+
+		.btndiv{
+
+				width: 100%;
+				height: auto;
+		}
+		.Text-light
+		{
+			color:#0e153a;
+		}
+		a{
+			text-decoration: none;
+			text-align: left;
+		}
+	</style>
+</head>
+<body onload='document.form1.text1.focus()'>
+<form name="form1" action="#">
+	<fieldset class="FormLayout">
+		<legend>
+	<b>ပို့စ်တင်ရန်အောက်ပါတို့ကိုဖြည့်ပါ</b>
+</legend>
+		
+		<div class="Form-input">
+			
+			<input type="text" name="" required="" placeholder="အဆောင်နာမည်">
+		</div>
+		
+		<div class="Form-input">
+			
+			<input type="text" name="" required="" placeholder="မြို့နယ်">
+		</div>
+		<div class="Form-input">
+			
+			<input type="text" name="email" required="" placeholder="အီးမေးလ်"  onclick="phonenumber(document.form1.text1)"/>
+		</div>
+
+		<div class="Form-input">
+			
+			<input type="text" name="" required="" placeholder="တစ်ယောက်ခန်းဈေးနှုန်">
+			
+		</div>
+		<div class="Form-input">
+			<input type="text" name="" required="" placeholder="နှစ်ယောက်ခန်းဈေးနှုန်း">
+		</div>
+			
+			<div class="Form-input">
+			<input type="text" name="" required="" placeholder="သုံးယောက်ခန်းဈေးနှုန်">
+		</div>
+
+		
+		<div class="Form-input">
+			
+			<textarea rows="7" cols="50"placeholder="Describe yourself here..."></textarea>
+		</div>
+
+
+		<div class="Form-input">
+			<a href="#popup1"><input type="button" name="" required=""  value="အဆောင်တည်နေရာရွှေးချယ်ရန်ဤနေရာကိုနှိပ်ပါ
+"></a>
+		</div>
+
+
+		<div class="Form-input">
+			<label class="Text-light">&nbsp;မြို့နယ်ရွေးချယ်ပါ</label>
+			<select class="SelectLayout">
+				<option>Yangon</option>
+				<option>Bago</option>
+			</select>
+			
+		</div>
+		
+				
+			
+				<div class="wrap-upload-buttons">
+        		<div class="container">
+            		
+           		 <ul class="btn-nav">
+
+                <li><b>အဆောင်ဓာတ်ပုံထည့်ရန်</b>&nbsp; &nbsp;<span><img src="cam_ico.png" /><input type="file" name="" click-type="type1" class="picupload" multiple accept="image/*" /></span></li>
+                
+            </ul>
+        </div>
+    </div>
+
+		
+		
+		<div class="btndiv">
+			<button class="Btn">
+			
+		Post</button>
+
+		<button class="Btn">Cancel</button>
+		</div>
+	
+	</fieldset>
+
+
+
+</form>
+
+
+<div class="modal fade popups" id="hint_brand" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content clearfix">
+                <div class="modal-body login-box clearfix">
+                    
+                        
+                    
+                    <!--user post text -wrap end-->
+                    <ul id="media-list" class="clearfix">
+                        <li class="myupload">
+                            <span><i class="fa fa-plus" aria-hidden="true"></i><input type="file" click-type="type2" id="picupload" class="picupload" multiple></span>
+                        </li>
+                    </ul>
+
+                    <!--post btn wrap-->
+                    <div class="user-post-btn-wrap clearfix">
+                        <input type="submit" class="btn" value="post">
+                    </div>
+                    <!--post btn wrap end-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--bootstrap modal end-->
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>>
+<script src="app.js"></script>
+
+
+</script>
+
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h5>ရွေးချယ်လိုသောနေရာကိုမြေပုံပေါ်တွင်နှိပ်ပါ</h5>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+
+			<div id="map"></div>
+		</div>
+		 <script>
+
+    	
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var myanmar = {lat: 	16.871311, lng:96.199379};
+  var kyaukpadaung={lat:20.844360,lng:95.125816};
+  var hsipaw = {lat: 	22.623632	, lng:	97.300362};
+  var taunggyi={lat:	20.783632,lng:97.035362};
+  var sittwe={lat:	20.144444 ,lng:	92.896942 };
+  var myeik={lat:12.449316 ,lng:98.627014};
+  var mandalay={lat:	21.954510,lng:96.093292};
+  var mawlamyine={lat:16.49051,lng:97.62825};
+  var taungoo={lat:18.94291,lng:96.43408};
+  var pyay={lat:18.82464,lng:95.22216};
+
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 5, center: myanmar});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: myanmar, map: map});
+  var marker = new google.maps.Marker({position: kyaukpadaung,map :map});
+  var marker = new google.maps.Marker({position: hsipaw,map :map});
+  var marker=new google.maps.Marker({position:taunggyi,map:map});
+  var marker=new google.maps.Marker({position:sittwe,map:map});
+  var marker=new google.maps.Marker({position:myeik,map:map});
+  var marker=new google.maps.Marker({position:mandalay,map:map});
+  var marker=new google.maps.Marker({position:mawlamyine,map:map});
+  var marker=new google.maps.Marker({position:taungoo,map:map});
+  var marker=new google.maps.Marker({position:pyay,map:map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkHwE66LuD5eYZHGb-9XC3AR99zhc8Gg0&callback=initMap">
+    </script>
+	</div>
+</div>
+</body>
+</html>
